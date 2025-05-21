@@ -1,0 +1,41 @@
+// File: app/build.gradle
+
+// Apply the Android Application plugin and Kotlin Android plugin
+plugins {
+    alias(libs.plugins.android.application) // Make sure this alias is in libs.versions.toml
+    alias(libs.plugins.kotlin.android)      // Make sure this alias is in libs.versions.toml
+}
+
+android {
+    namespace "com.kimboflash"
+    compileSdk 36 // Consider using libs.versions.compileSdk if defined in TOML
+
+    defaultConfig {
+        applicationId "com.kimboflash"
+        minSdk 21 // Consider using libs.versions.minSdk if defined in TOML
+        targetSdk 36 // Consider using libs.versions.targetSdk if defined in TOML
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation(libs.kotlin.stdlib)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.material)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.usbserial)
+}

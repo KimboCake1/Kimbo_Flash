@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- FTDI FT232RL (common in K+DCAN cables) -->
+    <usb-device vendor-id="1027" product-id="24577" /> <!-- 0x0403, 0x6001 -->
+
+    <!-- CP2102 USB to UART Bridge -->
+    <usb-device vendor-id="4292" product-id="60000" /> <!-- 0x10C4, 0xEA60 -->
+
+    <!-- CH340 USB to UART -->
+    <usb-device vendor-id="6790" product-id="29987" /> <!-- 0x1A86, 0x7523 -->
+
+    <!-- Generic ELM327 -->
+    <usb-device vendor-id="9025" /> <!-- 0x2341 - Some ELM327 clones -->
+
+    <!-- Add other common OBD adapter VID/PIDs as needed -->
+        <!-- Filter for a specific vendor ID and product ID -->
+    <usb-device vendor-id="1234" product-id="5678" />
+        <!-- Or filter for a specific USB device class, subclass, and protocol -->
+        <!-- <usb-device class="255" subclass="66" protocol="1" /> -->
+        <!-- Example: Filter for an FTDI device -->
+    <usb-device vendor-id="1027" product-id="24577" />
+        <!-- Add other devices your app supports -->
+</resources>

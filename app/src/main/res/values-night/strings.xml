@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KimboFlash</string>
+    <string name="title_text">KimboCake</string>
+    <string name="subtitle_text">FREE MS42 &amp; MS43 TUNING</string>
+    <string name="description_text">ECU tuning and diagnostics for MS42 and MS43 engine control units.</string>
+    <string name="btn_read">READ ECU</string>
+    <string name="btn_write">WRITE TO ECU</string>
+    <string name="btn_errors">READ ERROR CODES</string>
+    <string name="use_bluetooth">Use Bluetooth</string>
+    <string name="use_usb">Use USB</string>
+    <string name="logo">TODO</string>
+</resources>

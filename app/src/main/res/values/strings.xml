@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KimboCake</string>
+    <string name="description_text">ECU tuning and diagnostics for MS42 and MS43 engine control units.</string>
+    <string name="btn_read">READ ECU</string>
+    <string name="btn_write">WRITE TO ECU</string>
+    <string name="btn_errors">READ ERROR CODES</string>
+
+    <!-- BIN picker -->
+    <string name="select_bin">Select BIN File</string>
+
+    <!-- SeekBar labels -->
+    <string name="ignition_advance">Ignition Advance: %1$d°</string>
+    <string name="fuel_mixture">Fuel Mixture: %1$d</string>
+
+    <!-- Patch options -->
+    <string name="pops_bangs">Pops &amp; Bangs</string>
+    <string name="ignition_cut_ms42">Ignition Cut Limiter (MS42)</string>
+    <string name="ignition_cut_ms43">Ignition Cut Limiter (MS43)</string>
+    <string name="launch_control">Launch Control</string>
+    <string name="no_lift_shift">No Lift Shift</string>
+    <string name="rolling_anti_lag">Rolling Anti-Lag</string>
+
+    <!-- Apply button -->
+    <string name="apply_patches">Apply Patches</string>
+
+    <!-- Explanations -->
+    <string name="explanation_ignition_advance_title">Ignition Advance</string>
+    <string name="explanation_ignition_advance">How far before Top Dead Center (BTDC) the spark is fired. Advancing the timing gives the air–fuel charge more time to burn, which can increase torque and power—too much advance, however, risks knock.</string>
+
+    <string name="explanation_fuel_mixture_title">Fuel Mixture</string>
+    <string name="explanation_fuel_mixture">The ratio of air to fuel (rich vs. lean). A richer mixture (more fuel) cools combustion and can boost low-end torque at the cost of higher consumption &amp; emissions. A leaner mixture (less fuel) improves economy and lowers emissions but runs hotter and can cause knock.</string>
+
+    <string name="explanation_pops_bangs_title">Pops &amp; Bangs</string>
+    <string name="explanation_pops_bangs">Unburned mixture is dumped into the exhaust and ignites there, creating the characteristic “pop &amp; bang” sound. Works on both MS42 and MS43 ECUs.</string>
+
+    <string name="explanation_ignition_cut_ms42_title">Ignition Cut Limiter (MS42 only)</string>
+    <string name="explanation_ignition_cut_ms42">Cuts spark at a user-defined rpm offset before the stock fuel-cut limiter engages, creating a crisper soft rev limit. MS42-format tables only.</string>
+
+    <string name="explanation_ignition_cut_ms43_title">Ignition Cut Limiter (MS43 only)</string>
+    <string name="explanation_ignition_cut_ms43">Same as the MS42 ignition-cut feature, but patched into the MS43 table layout. Use on MS43 ECUs only.</string>
+
+    <string name="explanation_launch_control_title">Launch Control</string>
+    <string name="explanation_launch_control">Holds engine rpm and mixture at a preset level to build boost for a consistent, hard launch. Works on both MS42 and MS43 platforms.</string>
+
+    <string name="explanation_no_lift_shift_title">No Lift Shift</string>
+    <string name="explanation_no_lift_shift">Keeps spark and ignition active during upshifts so boost is maintained—even while you’re shifting gears. Compatible with both MS42 and MS43.</string>
+
+    <string name="explanation_rolling_anti_lag_title">Rolling Anti-Lag</string>
+    <string name="explanation_rolling_anti_lag">Injects a minimal amount of fuel and retards timing when you lift off throttle, to keep the turbo spooled during roll-on acceleration. Primarily MS43-optimized but can be applied to MS42.</string>
+
+    <!-- Connection status -->
+    <string name="use_bluetooth">USE BLUETOOTH</string>
+    <string name="use_usb">USE USB</string>
+    <string name="status_disconnected">No connection found</string>
+    <string name="status_connected_bluetooth">Connected via Bluetooth</string>
+    <string name="status_connected_usb">Connected via USB</string>
+    <string name="status_connected_wifi">Connected via Wi-Fi</string>
+
+    <!-- Accessibility -->
+    <string name="cd_app_logo">App logo</string>
+    <string name="cd_read_ecu">Read ECU</string>
+    <string name="cd_write_ecu">Write to ECU</string>
+    <string name="cd_error_codes">Read error codes</string>
+
+    <!-- Messages -->
+    <string name="file_selected">File selected: %1$s</string>
+    <string name="error_no_file">Please select a file first</string>
+    <string name="patches_applied">Patches applied</string>
+
+    <!-- ADDED FOR TUNING CARD -->
+    <string name="cd_tune_ecu">ECU tuning</string>
+    <string name="btn_tune">TUNING OPTIONS</string>
+</resources>

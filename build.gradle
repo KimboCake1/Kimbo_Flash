@@ -1,0 +1,34 @@
+// File: build.gradle (Project-level)
+
+// The buildscript block is still needed for plugins applied directly to the root project
+// that are not (or cannot be) managed via the settings.gradle pluginManagement.
+// However, AGP for modules should NOT be here.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        // maven { url 'https.jitpack.io' } // Consider if still needed if all plugins come from GMD/Plugin Portal
+    }
+    // Dependencies block for buildscript if needed, e.g., for classpath dependencies
+    // that are not plugins managed in the `plugins {}` block or settings.gradle
+    // dependencies {
+    //     classpath "com.android.tools.build:gradle:..." // Example, AGP should be in settings.gradle or plugins {}
+    // }
+}
+
+// The plugins block should be after the buildscript block
+plugins {
+    // Gradle Versions Plugin - version preferably from libs.versions.toml
+    // Add to libs.versions.toml:
+    // [versions]
+    // benManesVersions = "0.48.0" // or your desired version
+    // [plugins]
+    // ben-manes-versions = { id = "com.github.ben-manes.versions", version.ref = "benManesVersions" }
+    // Then use: alias(libs.plugins.ben.manes.versions)
+    // For now, keeping it explicit as per your original if TOML alias isn't set up for this yet:
+    id "com.github.ben-manes.versions" version "0.48.0"
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

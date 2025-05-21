@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TuningActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_bin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/textIgnitionAdvance"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/infoIgnitionAdvance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline"
+                android:contentDescription="@string/explanation_ignition_advance_title"
+                android:onClick="onInfoIgnitionAdvanceClicked"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekIgnitionAdvance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/textFuelMixture"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/infoFuelMixture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline"
+                android:contentDescription="@string/explanation_fuel_mixture_title"
+                android:onClick="onInfoFuelMixtureClicked"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekFuelMixture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/cbPopsBangs"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/pops_bangs" />
+            <ImageView
+                android:id="@+id/infoPopsBangs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline"
+                android:contentDescription="@string/explanation_pops_bangs_title"
+                android:onClick="onInfoPopsBangsClicked"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/cbIgnitionCut42"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/ignition_cut_ms42" />
+            <ImageView
+                android:id="@+id/infoIgnitionCut42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline"
+                android:contentDescription="@string/explanation_ignition_cut_ms42_title"
+                android:onClick="onInfoIgnitionCut42Clicked"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/cbIgnitionCut43"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/ignition_cut_ms43" />
+            <ImageView
+                android:id="@+id/infoIgnitionCut43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline"
+                android:contentDescription="@string/explanation_ignition_cut_ms43_title"
+                android:onClick="onInfoIgnitionCut43Clicked"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/cbLaunchControl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/launch_control" />
+            <ImageView
+                android:id="@+id/infoLaunchControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline"
+                android:contentDescription="@string/explanation_launch_control_title"
+                android:onClick="onInfoLaunchControlClicked"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/cbNoLiftShift"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/no_lift_shift" />
+            <ImageView
+                android:id="@+id/infoNoLiftShift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline"
+                android:contentDescription="@string/explanation_no_lift_shift_title"
+                android:onClick="onInfoNoLiftShiftClicked"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/cbRollingAntiLag"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/rolling_anti_lag" />
+            <ImageView
+                android:id="@+id/infoRollingAntiLag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline"
+                android:contentDescription="@string/explanation_rolling_anti_lag_title"
+                android:onClick="onInfoRollingAntiLagClicked"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/apply_patches" />
+    </LinearLayout>
+</ScrollView>
